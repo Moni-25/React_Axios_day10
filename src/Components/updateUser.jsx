@@ -22,6 +22,20 @@ export default function UpdateUser()
           }  
     }
 
+    let name ="", user = name, email="", phone="", add="";
+
+    userItem.map(da => {
+        //console.log(da._id, userId.id)
+        if(da._id === userId.id)
+        {
+            name = da.name;
+            user = da.username
+            email = da.email
+            phone = da.phoneNo
+            add = da.address
+        }
+    })
+    
     function handleUpdateUser(e)
     {
         if(formData.name === undefined || formData.username === undefined || formData.email === undefined || formData.address === undefined || formData.phoneNo === undefined)
@@ -64,7 +78,7 @@ export default function UpdateUser()
                         <span className="ms-2" style={{color: "red", fontSize: "20px"}}>*</span>
                     </div>
                     <div className="col-lg-8">
-                        <input className="form-control" type="text" placeholder="Enter first name" id="name" required onChange={handleInput}/>
+                        <input className="form-control" type="text" placeholder={name} id="name" required onChange={handleInput}/>
                     </div>
                 </div>
                 <div className="row mt-2">
@@ -73,7 +87,7 @@ export default function UpdateUser()
                         <span className="ms-2" style={{color: "red", fontSize: "20px"}}>*</span>
                     </div>
                     <div className="col-lg-8">
-                        <input className ="form-control" type="text" placeholder="Enter Username" id="username" required onChange={handleInput}/>
+                        <input className ="form-control" type="text" placeholder={user} id="username" required onChange={handleInput}/>
                     </div>
                 </div>
                 <div className="row mt-2">
@@ -82,7 +96,7 @@ export default function UpdateUser()
                         <span className="ms-2" style={{color: "red", fontSize: "20px"}}>*</span>
                     </div>
                     <div className="col-lg-8">
-                        <input className ="form-control" type="text" placeholder="Enter Email Id" id="email" required onChange={handleInput}/>
+                        <input className ="form-control" type="text" placeholder={email} id="email" required onChange={handleInput}/>
                     </div>
                 </div>
                 <div className="row mt-2">
@@ -91,7 +105,7 @@ export default function UpdateUser()
                         <span className="ms-2" style={{color: "red", fontSize: "20px"}}>*</span>
                     </div>
                     <div className="col-lg-8">
-                        <input className ="form-control" type="text" placeholder="Enter Address" id="address" required onChange={handleInput}/>
+                        <input className ="form-control" type="text" placeholder={add} id="address" required onChange={handleInput}/>
                     </div>  
                 </div>
                 <div className="row mt-2">
@@ -100,7 +114,7 @@ export default function UpdateUser()
                         <span className="ms-2" style={{color: "red", fontSize: "20px"}}>*</span>
                     </div>
                     <div className="col-lg-8">
-                        <input className ="form-control" type="text" placeholder="Enter phone number" id="phoneNo" required onChange={handleInput}/>
+                        <input className ="form-control" type="text" placeholder={phone} id="phoneNo" required onChange={handleInput}/>
                     </div>
                 </div>
                 <div className="row mt-3 mb-4" style={{display: "flex", justifyContent: "center"}}>
