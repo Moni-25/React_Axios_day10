@@ -1,12 +1,13 @@
 1. Display all data in mock api
 
-   ![Screenshot 2024-04-04 223420](https://github.com/Moni-25/React_Axios_day10/assets/150880555/0aad9c42-3154-48c1-96d4-e98a68ea1760)
+   ![Screenshot 2024-04-04 175647](https://github.com/Moni-25/React_Axios_day10/assets/150880555/a7300555-d7ef-42a6-8831-36cb2af15378)
 
 2. Add New User
 
   ![Screenshot 2024-04-04 174408](https://github.com/Moni-25/React_Axios_day10/assets/150880555/93c7bf37-b1a6-4ee8-ad7c-bc57e8b9b339)
   ![Screenshot 2024-04-04 174331](https://github.com/Moni-25/React_Axios_day10/assets/150880555/f93793ba-799c-43b4-af6d-72de5d3ce02a)
   ![Screenshot 2024-04-04 174354](https://github.com/Moni-25/React_Axios_day10/assets/150880555/1321bc41-e156-452b-87d7-feb682012f0e)
+  ![Screenshot 2024-04-04 223420](https://github.com/Moni-25/React_Axios_day10/assets/150880555/0aad9c42-3154-48c1-96d4-e98a68ea1760)
 
 3. Update the user details first click the update button it will navigate the update page
 
