@@ -1,6 +1,6 @@
-![Screenshot 2024-04-04 175550](https://github.com/Moni-25/React_Axios_day10/assets/150880555/1294ad1f-d9e4-4d58-b325-fb206b542336)1. Display all data in mock api
+1. Display all data in mock api
 
-   ![Screenshot 2024-04-04 174319](https://github.com/Moni-25/React_Axios_day10/assets/150880555/6635c8c2-19e7-4989-9309-622098e9395c)
+   ![Screenshot 2024-04-04 223420](https://github.com/Moni-25/React_Axios_day10/assets/150880555/0aad9c42-3154-48c1-96d4-e98a68ea1760)
 
 2. Add New User
 
@@ -11,12 +11,15 @@
 3. Update the user details first click the update button it will navigate the update page
 
   ![Screenshot 2024-04-04 174319](https://github.com/Moni-25/React_Axios_day10/assets/150880555/e794132b-acb6-40f7-a6fd-682fafb823af)
+  ![Screenshot 2024-04-04 175550](https://github.com/Moni-25/React_Axios_day10/assets/150880555/1294ad1f-d9e4-4d58-b325-fb206b542336)
   ![Screenshot 2024-04-04 175550](https://github.com/Moni-25/React_Axios_day10/assets/150880555/1b5260e5-e26e-48da-a477-f46c741cb601)
 
 4. Delete the user details first click the deletd button it will navigate the delete page
-   ![Screenshot 2024-04-04 174319](https://github.com/Moni-25/React_Axios_day10/assets/150880555/eaea757a-4936-4072-8372-9f9bace5714d)
+   ![Screenshot 2024-04-04 223420](https://github.com/Moni-25/React_Axios_day10/assets/150880555/d7c34ea8-44a5-4542-8998-a10c99843bc8)
    ![Screenshot 2024-04-04 175630](https://github.com/Moni-25/React_Axios_day10/assets/150880555/c454b5e6-4f19-4cce-b621-db0015166c1d)
    ![Screenshot 2024-04-04 175638](https://github.com/Moni-25/React_Axios_day10/assets/150880555/2d01d1a8-f1c1-429b-ba74-be966b3861de)
+   ![Screenshot 2024-04-04 175647](https://github.com/Moni-25/React_Axios_day10/assets/150880555/4fdbb16f-c7ad-4e06-8c8a-281cd8315a69)
+
 
 
 
