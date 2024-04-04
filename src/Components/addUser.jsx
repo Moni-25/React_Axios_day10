@@ -1,14 +1,9 @@
-import { useContext, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom"
-import { userContext } from "../Context/userContext";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom"
 
-export default function UpdateUser()
+export default function AddUser()
 {
-    const location = useLocation();
-    const userId  = location.state;
-    console.log(userId)
     const [formData, setFormData] = useState([]);
-    const {userItem = []} = useContext(userContext);
     const navigate = useNavigate();
     
     function handleInput(e){
@@ -24,18 +19,17 @@ export default function UpdateUser()
 
     function handleUpdateUser(e)
     {
-        console.log(userId.id)
-        fetch(`http://localhost:5000/api/user/update_user/${userId.id}`,{
+        fetch("http://localhost:5000/api/user/create",{
             headers: {
                 Accept: "application/json",
                 "Content-Type": "application/json",
             },
-            method: "PATCH",
+            method: "POST",
             body: JSON.stringify(formData),
         })
         .then((response) => response.json())
-        .then((response) => {if(response.message === "User Details Submiited Successfully!!!!"){
-            alert(`User details has been updated successfully!!!`);
+        .then((response) => {if(response.message === "User Created Successfully!!!"){
+            alert("New User created successfully!!!");
             navigate("/");
             window.location.reload();
         }})

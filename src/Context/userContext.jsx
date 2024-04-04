@@ -12,7 +12,7 @@ export default function UserContextProvider({children})
     async function getUserData()
     {
         try{
-            const res = await axios.get("https://mentor-student-1dic.onrender.com/api/student");
+            const res = await axios.get("https://mentor-student-1dic.onrender.com/api/user");
             setUser(res.data.data);
         }
         catch(error)
