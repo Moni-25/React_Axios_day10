@@ -6,13 +6,13 @@ export default function UpdateUser()
 {
     const location = useLocation();
     const userId  = location.state;
-    console.log(userId)
+    //console.log(userId)
     const [formData, setFormData] = useState([]);
     const {userItem = []} = useContext(userContext);
     const navigate = useNavigate();
     
     function handleInput(e){
-        console.log(e.target.id, e.target.value);
+        //console.log(e.target.id, e.target.value);
         if (e) {
             const formCopy = {
               ...formData
@@ -24,8 +24,16 @@ export default function UpdateUser()
 
     function handleUpdateUser(e)
     {
-        console.log(userId.id)
-        fetch(`http://localhost:5000/api/user/update_user/${userId.id}`,{
+        if(formData.name === undefined || formData.username === undefined || formData.email === undefined || formData.address === undefined || formData.phoneNo === undefined)
+        {
+            alert("All fields are mandatory")
+        }
+        else if(formData.phoneNo.length !== 10)
+        {
+            alert("Phone Number is invalid!!")
+        }
+        else{
+        fetch(`https://mentor-student-1dic.onrender.com/api/user/update_user/${userId.id}`,{
             headers: {
                 Accept: "application/json",
                 "Content-Type": "application/json",
@@ -40,6 +48,7 @@ export default function UpdateUser()
             window.location.reload();
         }})
         .catch((error) => console.log(error))
+    } 
     }
     return(
         <>

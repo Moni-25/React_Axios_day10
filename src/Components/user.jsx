@@ -1,12 +1,13 @@
 import { useContext } from "react"
 import { userContext } from "../Context/userContext"
-import {Link} from "react-router-dom"
+import {Link, useLocation} from "react-router-dom"
 
 export default function UserDisplay()
 {
     const {userItem = []} = useContext(userContext);
-    console.log(userItem)
-    userItem.map((da, index) => console.log(da._id))
+    //console.log(userItem)
+    //userItem.map((da, index) => console.log(da._id))
+
     return(
         <>
             <div className="container-fluid mt-5" style={{width: "100%", height: "100%"}}>
@@ -42,8 +43,12 @@ export default function UserDisplay()
                             <td style={{textAlign: "center"}}>{data.phoneNo}</td>
                             <td>
                                 <i className="bi bi-file-earmark-plus-fill"></i>
-                                <Link to="/update_user" state={{id: data._id}} style={{textDecoration: "none"}}>&nbsp;&nbsp;Update</Link><br></br>
-                                <i className="bi bi-trash3-fill"></i><a href="">&nbsp;&nbsp;Delete</a>
+                                <Link to="/update_user" state={{id: data._id}} 
+                                style={{textDecoration: "none", fontWeight: "700", color: "#751aff"}}>&nbsp;&nbsp;Update</Link><br></br>
+                                <i className="bi bi-trash3-fill"></i>
+                                <Link to="/delete_user" state={{id: data._id}} style={{textDecoration: "none", fontWeight: "700", color: "#751aff"}}>
+                                    &nbsp;&nbsp;Delete
+                                </Link>
                             </td>
                         </tr>
                     )}

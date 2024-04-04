@@ -7,7 +7,7 @@ export default function AddUser()
     const navigate = useNavigate();
     
     function handleInput(e){
-        console.log(e.target.id, e.target.value);
+        //console.log(e.target.id, e.target.value);
         if (e) {
             const formCopy = {
               ...formData
@@ -19,7 +19,17 @@ export default function AddUser()
 
     function handleUpdateUser(e)
     {
-        fetch("http://localhost:5000/api/user/create",{
+        //console.log(formData.name)
+        if(formData.name === undefined || formData.username === undefined || formData.email === undefined || formData.address === undefined || formData.phoneNo === undefined)
+        {
+            alert("All fields are mandatory")
+        }
+        else if(formData.phoneNo.length !== 10)
+        {
+            alert("Phone Number is invalid!!")
+        }
+        else{
+        fetch("https://mentor-student-1dic.onrender.com/api/user/create",{
             headers: {
                 Accept: "application/json",
                 "Content-Type": "application/json",
@@ -34,6 +44,7 @@ export default function AddUser()
             window.location.reload();
         }})
         .catch((error) => console.log(error))
+        }
     }
     return(
         <>
@@ -42,7 +53,7 @@ export default function AddUser()
                 border: "2px solid #ff9999",
                 backgroundColor:"white",
                 borderRadius: "10px"}}> 
-                <h1 className="card-header" style={{textAlign: "center"}}>Update User Details</h1>
+                <h1 className="card-header" style={{textAlign: "center"}}>New User</h1>
                 <div className="row mt-4">
                     <div className="col-lg-4">
                         <label htmlFor="name">Name</label>
